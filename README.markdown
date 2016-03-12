@@ -6,10 +6,11 @@
 
 需要准备：请查看request.txt
 
+---
 
 如何安装该插件： 打开chrome://extensions/, 将reminder文件夹拖入到插件区即完成安装
 
-
+---
 文件描述：<br>
 
 -css:样式表文件夹
@@ -30,10 +31,14 @@
 
 
 运行框架：
+
 step1： 点击插件图标， popup.js向server.py发API请求服务
+
 step2： server.py抓取页面消息， 返回给popup.js
+
 step3： popup.js正确获取消息之后， 进行页面渲染
 
+---
 
 注意点：
 需要自行启动server.py服务， 并注意防火墙等相关事宜
@@ -48,10 +53,12 @@ python server.py 1235
 ![image](xg.gif)
 
 
-
+---
 扩展：
 如果想查看自己感兴趣的消息， 可自行开发
 （需要懂一些Python， 以及JavaScript， 可仿照我的代码进行简单扩充)
+
+---
 Reference：<br>
 [http://www.cnblogs.com/guogangj/p/3235703.html](http://www.cnblogs.com/guogangj/p/3235703.html)
 <br>
