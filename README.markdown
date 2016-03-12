@@ -4,10 +4,10 @@
 ---
 
 
-
-
 需要准备：请查看request.txt
 
+
+如何安装该插件： 打开chrome://extensions/, 将reminder文件夹拖入到插件区即完成安装
 
 
 文件描述：
