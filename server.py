@@ -14,6 +14,7 @@ import time
 urls = (
     '/acminfo', 'Acminfo',
     '/segmentfault', 'Segmentfault',
+    '/tongqu', 'Tongqu',
 )
 
 app = web.application(urls, globals())
@@ -30,8 +31,11 @@ class Acminfo:
 		content = getContent(url)
 		content = content.find_all("table", id="wp-table-reloaded-id-1-no-1")
 		web.header('content-type','text/json')
-		d = json.dumps({'msg':str(content[0])})
-		return 'myJsonMethod(' + d + ');'
+		if content:
+			d = json.dumps({'msg':str(content[0])})
+		else:
+			d = '{}'
+		return 'jsonAcminfo(' + d + ');'
 
 class Segmentfault:
 	def GET(self):
@@ -59,8 +63,20 @@ class Segmentfault:
 
 		msg += content.prettify()
 		d = json.dumps({'msg':str(msg)})
-		return 'myJsonMethod(' + d + ');'
+		return 'jsonSegmentfault(' + d + ');'
 
+
+class Tongqu:
+	def GET(self):
+		url = "http://www.tongqu.me"
+		content = getContent(url)
+		content = content.find_all("div", class_="wrap")
+		web.header('content-type','text/json')
+		if content:
+			d = json.dumps({'msg':str(content[0])})
+		else:
+			d = '{}'
+		return 'jsonTongqu(' + d + ');'
 
 if __name__ == '__main__':
 	app.run()

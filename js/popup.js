@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
   getCurrentTabUrl(function(url) {
     GetContent('acminfo')
     GetContent('segmentfault')
+    GetContent('tongqu')
   });
 });
 
@@ -28,13 +29,30 @@ function GetContent(source){
   url = 'http://localhost:' + port + '/' + source
   data = new Object()
 
+  jsonpCallback = ''
+  switch(source){
+    case 'acminfo':
+      jsonpCallback = 'jsonAcminfo'
+      break
+
+    case 'segmentfault':
+      jsonpCallback = 'jsonSegmentfault'
+      break
+
+    case 'tongqu':
+      jsonpCallback = 'jsonTongqu'
+      break
+
+    default: break
+  }
+
   $.ajax({
     type : 'get',
     dataType : 'jsonp',
     jsonp: false,
-    jsonpCallback: "myJsonMethod",
+    jsonpCallback: jsonpCallback,
     url : url,
-    async : true,
+    async : false,
 
     success : function(response){
       //Construct Data
@@ -47,6 +65,10 @@ function GetContent(source){
 
         case 'segmentfault':
             $('#segmentfault').html(response.msg)
+            break
+
+        case 'tongqu':
+            $('#tongqu').html(response.msg)
             break
 
         default: break
