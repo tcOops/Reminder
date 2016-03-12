@@ -68,12 +68,13 @@ class Segmentfault:
 
 class Tongqu:
 	def GET(self):
-		url = "http://www.tongqu.me"
+		url = "http://www.tongqu.me/index.php/act/type"
 		content = getContent(url)
-		content = content.find_all("div", class_="wrap")
+		#print content
+		#content = content.find_all("div", class_="wrap")
 		web.header('content-type','text/json')
 		if content:
-			d = json.dumps({'msg':str(content[0])})
+			d = json.dumps({'msg':str(content)})
 		else:
 			d = '{}'
 		return 'jsonTongqu(' + d + ');'

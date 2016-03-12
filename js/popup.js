@@ -82,3 +82,9 @@ function GetContent(source){
 }
 
 
+$(function getLocalTime() {     
+    var time = new Date(parseInt(Date.now())).toLocaleString().substr(0,19)
+    var con = '<h2 style="color:red"> 当前时间：' + time.toString() + '</h2>'
+    $('#nowtime').html(con)
+});
+
