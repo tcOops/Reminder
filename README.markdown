@@ -46,6 +46,11 @@ python server.py 1235
 
 ![image](xg.gif)
 
+
+
+扩展：
+如果想查看自己感兴趣的消息， 可自行开发
+（需要懂一些Python， 以及JavaScript， 可仿照我的代码进行简单扩充)
 Reference：<br>
 [http://www.cnblogs.com/guogangj/p/3235703.html](http://www.cnblogs.com/guogangj/p/3235703.html)
 <br>
