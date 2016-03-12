@@ -1,0 +1,52 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>A reminder tool</title>
+   
+     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+     <link rel="stylesheet" href="css/main_.css" type="text/css">
+
+    <script src="js/popup.js"></script>
+    <script src="js/jquery.js"></script>
+  </head>
+
+  <body>   
+  <div style="width:100%">
+     <aside class="bg-info aboutme">
+      <div class="text-center">
+        <div class="call-to-action">
+
+
+              <h3>算法竞赛：</h3>
+              <div id="algo" style="margin:10px 0 30px 10px">
+
+              </div>
+
+
+              <h3>SegmentFault活动：</h3>
+              <div id="segmentfault" style="margin:10px 0 30px 10px">
+
+              </div> 
+        </div>
+      </div>
+    </aside>
+
+    <br><br>
+
+    <div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+               <h1>欢迎使用Chrome插件， 这是有提醒功能的插件</h1>
+               <h1>************************************************************************************************************************************************</h1>
+            </div>    
+        </div>
+    </div>
+  </div>
+  </body>
+</html>
+

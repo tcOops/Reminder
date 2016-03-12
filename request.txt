@@ -1,0 +1,3 @@
+python(2.7->)
+web.py(sudo pip install web.py)
+beautifulsoup(sudo pip install beautifulsoup4)
