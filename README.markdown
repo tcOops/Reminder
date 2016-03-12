@@ -10,7 +10,8 @@
 如何安装该插件： 打开chrome://extensions/, 将reminder文件夹拖入到插件区即完成安装
 
 
-文件描述：
+文件描述：<br>
+
 -css:样式表文件夹
 
 -js:javascript文件夹
